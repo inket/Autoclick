@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B201D44C1441A57900F3CB0B /* Clicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B201D44B1441A57900F3CB0B /* Clicker.m */; };
+		B208905814A9275D00A255B1 /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B208904D14A9275D00A255B1 /* SRCommon.m */; };
+		B208905A14A9275D00A255B1 /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B208905114A9275D00A255B1 /* SRKeyCodeTransformer.m */; };
+		B208905B14A9275D00A255B1 /* SRRecorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B208905314A9275D00A255B1 /* SRRecorderCell.m */; };
+		B208905C14A9275D00A255B1 /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B208905514A9275D00A255B1 /* SRRecorderControl.m */; };
+		B208905D14A9275D00A255B1 /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B208905714A9275D00A255B1 /* SRValidator.m */; };
+		B208906214A9295200A255B1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B208906114A9295200A255B1 /* Carbon.framework */; };
+		B2AC8F3813EC9AB300A890AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AC8F3713EC9AB300A890AA /* Cocoa.framework */; };
+		B2AC8F4213EC9AB300A890AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */; };
+		B2AC8F4413EC9AB300A890AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4313EC9AB300A890AA /* main.m */; };
+		B2AC8F4B13EC9AB300A890AA /* AutoclickAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */; };
+		B2AC8F4E13EC9AB300A890AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */; };
+		B2AC8F5613ECAD5800A890AA /* MBNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F5513ECAD5800A890AA /* MBNumberField.m */; };
+		B2E421BB14ACC9A100005139 /* clicking.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B414ACC9A100005139 /* clicking.icns */; };
+		B2E421BC14ACC9A100005139 /* clicking1.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B514ACC9A100005139 /* clicking1.icns */; };
+		B2E421BD14ACC9A100005139 /* clicking2.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B614ACC9A100005139 /* clicking2.icns */; };
+		B2E421BE14ACC9A100005139 /* clicking3.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B714ACC9A100005139 /* clicking3.icns */; };
+		B2E421BF14ACC9A100005139 /* default.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B814ACC9A100005139 /* default.icns */; };
+		B2E421C014ACC9A100005139 /* paused.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B914ACC9A100005139 /* paused.icns */; };
+		B2E421C114ACC9A100005139 /* waiting.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421BA14ACC9A100005139 /* waiting.icns */; };
+		B2E421CA14ACE0B400005139 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E421C914ACE0B300005139 /* IOKit.framework */; };
+		B2E421CC14ACE0B900005139 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E421CB14ACE0B900005139 /* Security.framework */; };
+		B2E421CE14ACE0BF00005139 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E421CD14ACE0BF00005139 /* libcrypto.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B201D44A1441A57900F3CB0B /* Clicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clicker.h; sourceTree = "<group>"; };
+		B201D44B1441A57900F3CB0B /* Clicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clicker.m; sourceTree = "<group>"; };
+		B208904C14A9275D00A255B1 /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCommon.h; sourceTree = "<group>"; };
+		B208904D14A9275D00A255B1 /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCommon.m; sourceTree = "<group>"; };
+		B208905014A9275D00A255B1 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyCodeTransformer.h; sourceTree = "<group>"; };
+		B208905114A9275D00A255B1 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRKeyCodeTransformer.m; sourceTree = "<group>"; };
+		B208905214A9275D00A255B1 /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderCell.h; sourceTree = "<group>"; };
+		B208905314A9275D00A255B1 /* SRRecorderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderCell.m; sourceTree = "<group>"; };
+		B208905414A9275D00A255B1 /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderControl.h; sourceTree = "<group>"; };
+		B208905514A9275D00A255B1 /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControl.m; sourceTree = "<group>"; };
+		B208905614A9275D00A255B1 /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRValidator.h; sourceTree = "<group>"; };
+		B208905714A9275D00A255B1 /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRValidator.m; sourceTree = "<group>"; };
+		B208906114A9295200A255B1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		B2AC8F3313EC9AB300A890AA /* Autoclick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autoclick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2AC8F3713EC9AB300A890AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B2AC8F3A13EC9AB300A890AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B2AC8F3B13EC9AB300A890AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B2AC8F3C13EC9AB300A890AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B2AC8F3F13EC9AB300A890AA /* Autoclick-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Autoclick-Info.plist"; sourceTree = "<group>"; };
+		B2AC8F4113EC9AB300A890AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2AC8F4313EC9AB300A890AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2AC8F4513EC9AB300A890AA /* Autoclick-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autoclick-Prefix.pch"; sourceTree = "<group>"; };
+		B2AC8F4913EC9AB300A890AA /* AutoclickAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoclickAppDelegate.h; sourceTree = "<group>"; };
+		B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoclickAppDelegate.m; sourceTree = "<group>"; };
+		B2AC8F4D13EC9AB300A890AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B2AC8F5413ECAD5800A890AA /* MBNumberField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNumberField.h; sourceTree = "<group>"; };
+		B2AC8F5513ECAD5800A890AA /* MBNumberField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNumberField.m; sourceTree = "<group>"; };
+		B2E421B414ACC9A100005139 /* clicking.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clicking.icns; sourceTree = "<group>"; };
+		B2E421B514ACC9A100005139 /* clicking1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clicking1.icns; sourceTree = "<group>"; };
+		B2E421B614ACC9A100005139 /* clicking2.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clicking2.icns; sourceTree = "<group>"; };
+		B2E421B714ACC9A100005139 /* clicking3.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clicking3.icns; sourceTree = "<group>"; };
+		B2E421B814ACC9A100005139 /* default.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = default.icns; sourceTree = "<group>"; };
+		B2E421B914ACC9A100005139 /* paused.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = paused.icns; sourceTree = "<group>"; };
+		B2E421BA14ACC9A100005139 /* waiting.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = waiting.icns; sourceTree = "<group>"; };
+		B2E421C914ACE0B300005139 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B2E421CB14ACE0B900005139 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B2E421CD14ACE0BF00005139 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2AC8F3013EC9AB300A890AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E421CE14ACE0BF00005139 /* libcrypto.dylib in Frameworks */,
+				B2E421CC14ACE0B900005139 /* Security.framework in Frameworks */,
+				B2E421CA14ACE0B400005139 /* IOKit.framework in Frameworks */,
+				B208906214A9295200A255B1 /* Carbon.framework in Frameworks */,
+				B2AC8F3813EC9AB300A890AA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B208904A14A9272E00A255B1 /* ShortcutRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				B208904C14A9275D00A255B1 /* SRCommon.h */,
+				B208904D14A9275D00A255B1 /* SRCommon.m */,
+				B208905014A9275D00A255B1 /* SRKeyCodeTransformer.h */,
+				B208905114A9275D00A255B1 /* SRKeyCodeTransformer.m */,
+				B208905214A9275D00A255B1 /* SRRecorderCell.h */,
+				B208905314A9275D00A255B1 /* SRRecorderCell.m */,
+				B208905414A9275D00A255B1 /* SRRecorderControl.h */,
+				B208905514A9275D00A255B1 /* SRRecorderControl.m */,
+				B208905614A9275D00A255B1 /* SRValidator.h */,
+				B208905714A9275D00A255B1 /* SRValidator.m */,
+			);
+			name = ShortcutRecorder;
+			sourceTree = "<group>";
+		};
+		B2AC8F2813EC9AB300A890AA = {
+			isa = PBXGroup;
+			children = (
+				B2AC8F3D13EC9AB300A890AA /* Autoclick */,
+				B2AC8F3613EC9AB300A890AA /* Frameworks */,
+				B2AC8F3413EC9AB300A890AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2AC8F3413EC9AB300A890AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC8F3313EC9AB300A890AA /* Autoclick.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2AC8F3613EC9AB300A890AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2E421CD14ACE0BF00005139 /* libcrypto.dylib */,
+				B2E421CB14ACE0B900005139 /* Security.framework */,
+				B2E421C914ACE0B300005139 /* IOKit.framework */,
+				B208906114A9295200A255B1 /* Carbon.framework */,
+				B2AC8F3713EC9AB300A890AA /* Cocoa.framework */,
+				B2AC8F3913EC9AB300A890AA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2AC8F3913EC9AB300A890AA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC8F3A13EC9AB300A890AA /* AppKit.framework */,
+				B2AC8F3B13EC9AB300A890AA /* CoreData.framework */,
+				B2AC8F3C13EC9AB300A890AA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B2AC8F3D13EC9AB300A890AA /* Autoclick */ = {
+			isa = PBXGroup;
+			children = (
+				B2E421B214ACC96E00005139 /* Icons */,
+				B208904A14A9272E00A255B1 /* ShortcutRecorder */,
+				B2AC8F4913EC9AB300A890AA /* AutoclickAppDelegate.h */,
+				B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */,
+				B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */,
+				B2AC8F3E13EC9AB300A890AA /* Supporting Files */,
+				B2AC8F5413ECAD5800A890AA /* MBNumberField.h */,
+				B2AC8F5513ECAD5800A890AA /* MBNumberField.m */,
+				B201D44A1441A57900F3CB0B /* Clicker.h */,
+				B201D44B1441A57900F3CB0B /* Clicker.m */,
+			);
+			path = Autoclick;
+			sourceTree = "<group>";
+		};
+		B2AC8F3E13EC9AB300A890AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC8F3F13EC9AB300A890AA /* Autoclick-Info.plist */,
+				B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */,
+				B2AC8F4313EC9AB300A890AA /* main.m */,
+				B2AC8F4513EC9AB300A890AA /* Autoclick-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2E421B214ACC96E00005139 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B2E421B414ACC9A100005139 /* clicking.icns */,
+				B2E421B514ACC9A100005139 /* clicking1.icns */,
+				B2E421B614ACC9A100005139 /* clicking2.icns */,
+				B2E421B714ACC9A100005139 /* clicking3.icns */,
+				B2E421B814ACC9A100005139 /* default.icns */,
+				B2E421B914ACC9A100005139 /* paused.icns */,
+				B2E421BA14ACC9A100005139 /* waiting.icns */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2AC8F3213EC9AB300A890AA /* Autoclick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2AC8F5113EC9AB300A890AA /* Build configuration list for PBXNativeTarget "Autoclick" */;
+			buildPhases = (
+				B2AC8F2F13EC9AB300A890AA /* Sources */,
+				B2AC8F3013EC9AB300A890AA /* Frameworks */,
+				B2AC8F3113EC9AB300A890AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Autoclick;
+			productName = Autoclick;
+			productReference = B2AC8F3313EC9AB300A890AA /* Autoclick.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2AC8F2A13EC9AB300A890AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = B2AC8F2D13EC9AB300A890AA /* Build configuration list for PBXProject "Autoclick" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B2AC8F2813EC9AB300A890AA;
+			productRefGroup = B2AC8F3413EC9AB300A890AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2AC8F3213EC9AB300A890AA /* Autoclick */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2AC8F3113EC9AB300A890AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2AC8F4213EC9AB300A890AA /* InfoPlist.strings in Resources */,
+				B2AC8F4E13EC9AB300A890AA /* MainMenu.xib in Resources */,
+				B2E421BB14ACC9A100005139 /* clicking.icns in Resources */,
+				B2E421BC14ACC9A100005139 /* clicking1.icns in Resources */,
+				B2E421BD14ACC9A100005139 /* clicking2.icns in Resources */,
+				B2E421BE14ACC9A100005139 /* clicking3.icns in Resources */,
+				B2E421BF14ACC9A100005139 /* default.icns in Resources */,
+				B2E421C014ACC9A100005139 /* paused.icns in Resources */,
+				B2E421C114ACC9A100005139 /* waiting.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2AC8F2F13EC9AB300A890AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2AC8F4413EC9AB300A890AA /* main.m in Sources */,
+				B2AC8F4B13EC9AB300A890AA /* AutoclickAppDelegate.m in Sources */,
+				B2AC8F5613ECAD5800A890AA /* MBNumberField.m in Sources */,
+				B201D44C1441A57900F3CB0B /* Clicker.m in Sources */,
+				B208905814A9275D00A255B1 /* SRCommon.m in Sources */,
+				B208905A14A9275D00A255B1 /* SRKeyCodeTransformer.m in Sources */,
+				B208905B14A9275D00A255B1 /* SRRecorderCell.m in Sources */,
+				B208905C14A9275D00A255B1 /* SRRecorderControl.m in Sources */,
+				B208905D14A9275D00A255B1 /* SRValidator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2AC8F4113EC9AB300A890AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2AC8F4D13EC9AB300A890AA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2AC8F4F13EC9AB300A890AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B2AC8F5013EC9AB300A890AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B2AC8F5213EC9AB300A890AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autoclick/Autoclick-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Autoclick/Autoclick-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B2AC8F5313EC9AB300A890AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autoclick/Autoclick-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Autoclick/Autoclick-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2AC8F2D13EC9AB300A890AA /* Build configuration list for PBXProject "Autoclick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2AC8F4F13EC9AB300A890AA /* Debug */,
+				B2AC8F5013EC9AB300A890AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2AC8F5113EC9AB300A890AA /* Build configuration list for PBXNativeTarget "Autoclick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2AC8F5213EC9AB300A890AA /* Debug */,
+				B2AC8F5313EC9AB300A890AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2AC8F2A13EC9AB300A890AA /* Project object */;
+}

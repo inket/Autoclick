@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'Autoclick' target in the 'Autoclick' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+
+#define LEFT 0
+#define RIGHT 1
+#define MIDDLE 2
+#define DEBUG_ENABLED NO
+
+#endif
