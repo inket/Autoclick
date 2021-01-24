@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "MBNumberField.h"
 #import "Clicker.h"
-#import "SRRecorderControl.h"
+#import <ShortcutRecorder/ShortcutRecorder.h>
 
 @interface AutoclickAppDelegate : NSObject <NSApplicationDelegate> {
     __unsafe_unretained NSWindow *window;

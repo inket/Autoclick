@@ -3,16 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B201D44C1441A57900F3CB0B /* Clicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B201D44B1441A57900F3CB0B /* Clicker.m */; };
-		B208905814A9275D00A255B1 /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B208904D14A9275D00A255B1 /* SRCommon.m */; };
-		B208905A14A9275D00A255B1 /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B208905114A9275D00A255B1 /* SRKeyCodeTransformer.m */; };
-		B208905B14A9275D00A255B1 /* SRRecorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B208905314A9275D00A255B1 /* SRRecorderCell.m */; };
-		B208905C14A9275D00A255B1 /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B208905514A9275D00A255B1 /* SRRecorderControl.m */; };
-		B208905D14A9275D00A255B1 /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B208905714A9275D00A255B1 /* SRValidator.m */; };
 		B208906214A9295200A255B1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B208906114A9295200A255B1 /* Carbon.framework */; };
 		B2AC8F3813EC9AB300A890AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AC8F3713EC9AB300A890AA /* Cocoa.framework */; };
 		B2AC8F4213EC9AB300A890AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */; };
@@ -20,6 +15,7 @@
 		B2AC8F4B13EC9AB300A890AA /* AutoclickAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */; };
 		B2AC8F4E13EC9AB300A890AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */; };
 		B2AC8F5613ECAD5800A890AA /* MBNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F5513ECAD5800A890AA /* MBNumberField.m */; };
+		B2BBD04925BD749100EEA9DF /* ShortcutRecorder in Frameworks */ = {isa = PBXBuildFile; productRef = B2BBD04825BD749100EEA9DF /* ShortcutRecorder */; };
 		B2E421BB14ACC9A100005139 /* clicking.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B414ACC9A100005139 /* clicking.icns */; };
 		B2E421BC14ACC9A100005139 /* clicking1.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B514ACC9A100005139 /* clicking1.icns */; };
 		B2E421BD14ACC9A100005139 /* clicking2.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B614ACC9A100005139 /* clicking2.icns */; };
@@ -35,16 +31,6 @@
 /* Begin PBXFileReference section */
 		B201D44A1441A57900F3CB0B /* Clicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clicker.h; sourceTree = "<group>"; };
 		B201D44B1441A57900F3CB0B /* Clicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clicker.m; sourceTree = "<group>"; };
-		B208904C14A9275D00A255B1 /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCommon.h; sourceTree = "<group>"; };
-		B208904D14A9275D00A255B1 /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCommon.m; sourceTree = "<group>"; };
-		B208905014A9275D00A255B1 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyCodeTransformer.h; sourceTree = "<group>"; };
-		B208905114A9275D00A255B1 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRKeyCodeTransformer.m; sourceTree = "<group>"; };
-		B208905214A9275D00A255B1 /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderCell.h; sourceTree = "<group>"; };
-		B208905314A9275D00A255B1 /* SRRecorderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderCell.m; sourceTree = "<group>"; };
-		B208905414A9275D00A255B1 /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderControl.h; sourceTree = "<group>"; };
-		B208905514A9275D00A255B1 /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControl.m; sourceTree = "<group>"; };
-		B208905614A9275D00A255B1 /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRValidator.h; sourceTree = "<group>"; };
-		B208905714A9275D00A255B1 /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRValidator.m; sourceTree = "<group>"; };
 		B208906114A9295200A255B1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		B2AC8F3313EC9AB300A890AA /* Autoclick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autoclick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AC8F3713EC9AB300A890AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -81,6 +67,7 @@
 				B2E421CC14ACE0B900005139 /* Security.framework in Frameworks */,
 				B2E421CA14ACE0B400005139 /* IOKit.framework in Frameworks */,
 				B208906214A9295200A255B1 /* Carbon.framework in Frameworks */,
+				B2BBD04925BD749100EEA9DF /* ShortcutRecorder in Frameworks */,
 				B2AC8F3813EC9AB300A890AA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,23 +75,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B208904A14A9272E00A255B1 /* ShortcutRecorder */ = {
-			isa = PBXGroup;
-			children = (
-				B208904C14A9275D00A255B1 /* SRCommon.h */,
-				B208904D14A9275D00A255B1 /* SRCommon.m */,
-				B208905014A9275D00A255B1 /* SRKeyCodeTransformer.h */,
-				B208905114A9275D00A255B1 /* SRKeyCodeTransformer.m */,
-				B208905214A9275D00A255B1 /* SRRecorderCell.h */,
-				B208905314A9275D00A255B1 /* SRRecorderCell.m */,
-				B208905414A9275D00A255B1 /* SRRecorderControl.h */,
-				B208905514A9275D00A255B1 /* SRRecorderControl.m */,
-				B208905614A9275D00A255B1 /* SRValidator.h */,
-				B208905714A9275D00A255B1 /* SRValidator.m */,
-			);
-			name = ShortcutRecorder;
-			sourceTree = "<group>";
-		};
 		B2AC8F2813EC9AB300A890AA = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				B2E421B214ACC96E00005139 /* Icons */,
-				B208904A14A9272E00A255B1 /* ShortcutRecorder */,
 				B2AC8F4913EC9AB300A890AA /* AutoclickAppDelegate.h */,
 				B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */,
 				B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */,
@@ -203,6 +172,9 @@
 			dependencies = (
 			);
 			name = Autoclick;
+			packageProductDependencies = (
+				B2BBD04825BD749100EEA9DF /* ShortcutRecorder */,
+			);
 			productName = Autoclick;
 			productReference = B2AC8F3313EC9AB300A890AA /* Autoclick.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +196,9 @@
 				Base,
 			);
 			mainGroup = B2AC8F2813EC9AB300A890AA;
+			packageReferences = (
+				B2BBD04725BD749100EEA9DF /* XCRemoteSwiftPackageReference "ShortcutRecorder" */,
+			);
 			productRefGroup = B2AC8F3413EC9AB300A890AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,11 +236,6 @@
 				B2AC8F4B13EC9AB300A890AA /* AutoclickAppDelegate.m in Sources */,
 				B2AC8F5613ECAD5800A890AA /* MBNumberField.m in Sources */,
 				B201D44C1441A57900F3CB0B /* Clicker.m in Sources */,
-				B208905814A9275D00A255B1 /* SRCommon.m in Sources */,
-				B208905A14A9275D00A255B1 /* SRKeyCodeTransformer.m in Sources */,
-				B208905B14A9275D00A255B1 /* SRRecorderCell.m in Sources */,
-				B208905C14A9275D00A255B1 /* SRRecorderControl.m in Sources */,
-				B208905D14A9275D00A255B1 /* SRValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2BBD04725BD749100EEA9DF /* XCRemoteSwiftPackageReference "ShortcutRecorder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git://github.com/Kentzo/ShortcutRecorder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2BBD04825BD749100EEA9DF /* ShortcutRecorder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2BBD04725BD749100EEA9DF /* XCRemoteSwiftPackageReference "ShortcutRecorder" */;
+			productName = ShortcutRecorder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2AC8F2A13EC9AB300A890AA /* Project object */;
 }
