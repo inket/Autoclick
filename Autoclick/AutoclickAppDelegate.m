@@ -16,14 +16,6 @@
 
 @end
 
-@interface AutoclickAppDelegate(Private)
-
-- (IBAction)changeMode:(id)sender;
-- (void)setMode:(BOOL)val;
-- (void)resizeModeButtonToFit;
-
-@end
-
 @implementation AutoclickAppDelegate {
     NSUserDefaultsController *_defaults;
 }
