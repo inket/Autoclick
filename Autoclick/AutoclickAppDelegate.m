@@ -92,22 +92,12 @@
     
     // Position the mode button in the titlebar
     NSView *frameView = [[window contentView] superview];
-    NSRect frame = [frameView frame];
-    
-    NSRect otherFrame = [modeButton frame];
-    otherFrame.origin.x = NSMaxX( frame ) - NSWidth( otherFrame ) - 2;
-    otherFrame.origin.y = NSMaxY( frame ) - NSHeight( otherFrame ) - 4;
-    [modeButton setFrame: otherFrame];
-    
     [frameView addSubview:modeButton];
-    
-    if (![userDefaults boolForKey:@"HasLaunchedBefore"])
-    {
-        CGPoint oldOrigin = [modeButton frame].origin;
-        [modeButton setFrameOrigin:NSMakePoint(oldOrigin.x, oldOrigin.y+1)];
-        [modeButton setShowsBorderOnlyWhileMouseInside:NO];
-        [userDefaults setBool:YES forKey:@"HasLaunchedBefore"];
-    }
+    [modeButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [NSLayoutConstraint activateConstraints:@[
+        [modeButton.trailingAnchor constraintEqualToAnchor:frameView.trailingAnchor constant:-6],
+        [modeButton.topAnchor constraintEqualToAnchor:frameView.topAnchor constant:6]
+    ]];
     
     if (![userDefaults boolForKey:@"Advanced"])
         [self setMode:NO];
@@ -167,8 +157,6 @@
     if (!val)
     {
         [modeButton setTitle:@"Basic"];
-        
-        [self resizeModeButtonToFit];
                 
         [[advancedBox subviews] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop){
             [obj setHidden:YES];
@@ -186,8 +174,6 @@
     else
     {
         [modeButton setTitle:@"Advanced"];
-
-        [self resizeModeButtonToFit];
                 
         [[advancedBox subviews] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop){
             [obj setHidden:NO];
@@ -205,20 +191,6 @@
     
     mode = val;
     [userDefaults setBool:val forKey:@"Advanced"];
-}
-
-- (void)resizeModeButtonToFit {
-    // Resize the button to match text
-    NSFont* font = [NSFont systemFontOfSize:10];
-    [modeButton setFont:font];
-    
-    NSDictionary* attrs = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
-    NSRect oldRect = [modeButton frame];
-    CGFloat newWidth = [[modeButton title] sizeWithAttributes:attrs].width + 15;
-    
-    [modeButton setFrameSize:NSMakeSize(newWidth, oldRect.size.height)];
-    if (newWidth != oldRect.size.width)
-        [modeButton setFrame:NSMakeRect(oldRect.origin.x - (newWidth-oldRect.size.width), oldRect.origin.y, newWidth, oldRect.size.height)];
 }
 
 - (IBAction)startStop:(id)sender {
