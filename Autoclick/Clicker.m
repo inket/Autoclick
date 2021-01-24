@@ -99,7 +99,7 @@
         
         stationarySeconds = [[parameters objectForKey:@"stationary"] integerValue];
         
-        if ([NSEvent modifierFlags] & NSFunctionKeyMask)
+        if ([NSEvent modifierFlags] & NSEventModifierFlagFunction)
         {
             [statusLabel setStringValue:@"Paused…"];
             [[NSApp appDelegate] pausedIcon];
@@ -196,7 +196,7 @@
 {
     self = [super init];
     if (self) {
-        fnPressed = [NSEvent modifierFlags] & NSFunctionKeyMask;
+        fnPressed = [NSEvent modifierFlags] & NSEventModifierFlagFunction;
         isClicking = NO;
         isWaiting = NO;
         waitingTimer = nil;
@@ -213,13 +213,13 @@
         };
 
 
-        [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:(void(^)(NSEvent*))moveBlock];
-        [NSEvent addLocalMonitorForEventsMatchingMask:NSMouseMovedMask handler:moveBlock];
+        [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskMouseMoved handler:(void(^)(NSEvent*))moveBlock];
+        [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskMouseMoved handler:moveBlock];
         
         NSEvent* (^fnBlock)(NSEvent*) = ^(NSEvent* event){
 //            if (DEBUG_ENABLED) NSLog(@"Flag Changed");
             
-            if ([event modifierFlags] & NSFunctionKeyMask) {
+            if ([event modifierFlags] & NSEventModifierFlagFunction) {
                 fnPressed = YES;
                 
                 if (isClicking && !isWaiting)
@@ -242,8 +242,8 @@
             return event;
         };
         
-        [NSEvent addGlobalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:(void(^)(NSEvent* event))fnBlock];
-        [NSEvent addLocalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:fnBlock];
+        [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskFlagsChanged handler:(void(^)(NSEvent* event))fnBlock];
+        [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskFlagsChanged handler:fnBlock];
     }
     
     return self;

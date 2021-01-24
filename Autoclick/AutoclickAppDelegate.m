@@ -119,8 +119,7 @@
         NSData* data = [userDefaults objectForKey:@"State"];
         if (data)
         {
-            NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-        
+            NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:data error:nil];
             [self window:window didDecodeRestorableState:unarchiver];
         }
     }
@@ -290,13 +289,11 @@
 - (void)applicationWillTerminate:(NSNotification *)notification {
     if (floor(NSAppKitVersionNumber) == NSAppKitVersionNumber10_6)
     {
-        NSMutableData* data = [NSMutableData data];
-        NSKeyedArchiver* archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-
+        NSKeyedArchiver* archiver = [[NSKeyedArchiver alloc] initRequiringSecureCoding:NO];
         [self window:window willEncodeRestorableState:archiver];
         [archiver finishEncoding];
         
-        [userDefaults setObject:data forKey:@"State"];
+        [userDefaults setObject:archiver.encodedData forKey:@"State"];
         [userDefaults synchronize];
     }
 }
@@ -333,8 +330,8 @@
 #pragma mark - Help & Support
 
 - (IBAction)openSupport:(id)sender {
-    NSString* subject = [@"Autoclick Support and Feedback" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
+    NSString* subject = [@"Autoclick Support and Feedback" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+
     NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"mailto:mahdi.adp@gmail.com?subject=%@", subject]];
     
     [[NSWorkspace sharedWorkspace] openURL:url];
