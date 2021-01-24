@@ -2,9 +2,6 @@
 //  AutoclickAppDelegate.m
 //  Autoclick
 //
-//  Created by Mahdi Bchetnia on 05/08/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
 
 #import "AutoclickAppDelegate.h"
 
@@ -304,13 +301,9 @@
 - (IBAction)openSupport:(id)sender {
     NSString* subject = [@"Autoclick Support and Feedback" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 
-    NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"mailto:mahdi.adp@gmail.com?subject=%@", subject]];
+    NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"mailto:autoclick@mahdi.jp?subject=%@", subject]];
     
     [[NSWorkspace sharedWorkspace] openURL:url];
-}
-
-- (IBAction)openTwitter:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://twitter.com/autoclickapp"]];
 }
 
 #pragma mark - Icon Handling

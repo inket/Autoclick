@@ -170,12 +170,6 @@
                                     <action selector="openSupport:" target="494" id="709"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Twitter…" id="707">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="openTwitter:" target="494" id="710"/>
-                                </connections>
-                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
@@ -466,7 +460,7 @@
                         </popUpButtonCell>
                     </popUpButton>
                     <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="660">
-                        <rect key="frame" x="236" y="361" width="84" height="32"/>
+                        <rect key="frame" x="237" y="361" width="82" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Basic" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="661">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
