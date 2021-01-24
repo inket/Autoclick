@@ -22,12 +22,11 @@
 - (void)setMode:(BOOL)val;
 - (void)resizeModeButtonToFit;
 
-OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void *userData);
-- (void)registerGlobalHotKey:(NSString*)name withFlags:(unsigned int)flags code:(short)code recorder:(SRRecorderControl*)aRecorder;
-
 @end
 
-@implementation AutoclickAppDelegate
+@implementation AutoclickAppDelegate {
+    NSUserDefaultsController *_defaults;
+}
 
 @synthesize window;
 @synthesize modeButton;
@@ -84,20 +83,20 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void 
     [startAfterSelector syncWithStepper];
     [stopAfterSelector syncWithStepper];
     [ifStationaryForSelector syncWithStepper];
-    
-    [shortcutRecorder setAutosaveName:@"KeyboardShortcut"];
-    [shortcutRecorder setDelegate:self];
-    
-    NSDictionary* keyCombo = [userDefaults objectForKey:[NSString stringWithFormat:@"ShortcutRecorder %@", [shortcutRecorder autosaveName]]];
-    
-    if (keyCombo)
-    {
-        KeyCombo combo;
-        combo.flags = ([keyCombo objectForKey:@"modifierFlags"])?[[keyCombo objectForKey:@"modifierFlags"] integerValue]:0;
-        combo.code = ([keyCombo objectForKey:@"keyCode"])?[[keyCombo objectForKey:@"keyCode"] integerValue]:-1;
-    
-        [shortcutRecorder setKeyCombo:combo];
-    }
+
+    _defaults = NSUserDefaultsController.sharedUserDefaultsController;
+    NSString *keyPath = @"values.shortcut";
+    NSDictionary *options = @{NSValueTransformerNameBindingOption: NSKeyedUnarchiveFromDataTransformerName};
+
+    SRShortcutAction *shortcutAction = [SRShortcutAction shortcutActionWithKeyPath:keyPath
+                                                                          ofObject:_defaults
+                                                                     actionHandler:^BOOL(SRShortcutAction *anAction) {
+        [[NSApp appDelegate] startStop:nil];
+        return YES;
+    }];
+    [[SRGlobalShortcutMonitor sharedMonitor] addAction:shortcutAction forKeyEvent:SRKeyEventTypeDown];
+
+    [shortcutRecorder bind:NSValueBinding toObject:_defaults withKeyPath:keyPath options:options];
     
     // Position the mode button in the titlebar
     NSView *frameView = [[window contentView] superview];
@@ -337,51 +336,6 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void 
     }
     
     return self;
-}
-
-- (void)dealloc {
-}
-
-#pragma mark - ShortcutRecorder
-
-OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void *userData)
-{
-    //Do something once the key is pressed
-	EventHotKeyID hotKeyID;
-	GetEventParameter(theEvent, kEventParamDirectObject, typeEventHotKeyID, NULL, sizeof(hotKeyID), NULL, &hotKeyID);
-
-    [[NSApp appDelegate] startStop:nil];
-    
-	return noErr;
-}
-
-- (void)registerGlobalHotKey:(NSString*)name withFlags:(unsigned int)flags code:(short)code recorder:(SRRecorderControl*)aRecorder {
-    // Register the event
-    EventTypeSpec eventType;
-    eventType.eventClass=kEventClassKeyboard;
-    eventType.eventKind=kEventHotKeyPressed;
-    
-    InstallApplicationEventHandler(&hotKeyHandler, 1, &eventType, NULL, NULL);
-    
-    EventHotKeyID gMyHotKeyID;
-    UnregisterEventHotKey(hotkeyRef);
-    gMyHotKeyID.signature='htk1';
-    gMyHotKeyID.id=1;
-    RegisterEventHotKey(code, flags, gMyHotKeyID, GetApplicationEventTarget(), 0, &hotkeyRef);
-}
-
-- (BOOL)shortcutRecorder:(SRRecorderControl *)aRecorder isKeyCode:(signed short)keyCode andFlagsTaken:(unsigned int)flags reason:(NSString **)aReason {
-	return NO;
-}
-
-- (void)shortcutRecorder:(SRRecorderControl *)aRecorder keyComboDidChange:(KeyCombo)newKeyCombo {
-	if (newKeyCombo.flags != 0 && newKeyCombo.code != -1) {
-		[self registerGlobalHotKey:[aRecorder autosaveName] withFlags:(unsigned int)[aRecorder cocoaToCarbonFlags:newKeyCombo.flags] code:newKeyCombo.code recorder:aRecorder];
-	}
-    else if (newKeyCombo.code == -1)
-    {
-        UnregisterEventHotKey(hotkeyRef);
-    }
 }
 
 #pragma mark - Help & Support

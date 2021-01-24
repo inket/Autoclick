@@ -328,10 +328,6 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                 </button>
-                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="691" customClass="SRRecorderControl">
-                                    <rect key="frame" x="141" y="17" width="150" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                </customView>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="698">
                                     <rect key="frame" x="146" y="64" width="118" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -341,6 +337,10 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
+                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="691" customClass="SRRecorderControl">
+                                    <rect key="frame" x="142" y="15" width="158" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </customView>
                             </subviews>
                         </view>
                         <color key="borderColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -497,7 +497,7 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="139" y="461"/>
+            <point key="canvasLocation" x="139" y="460.5"/>
         </window>
         <customObject id="494" customClass="AutoclickAppDelegate">
             <connections>
