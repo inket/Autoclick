@@ -11,6 +11,12 @@
 #import "Clicker.h"
 #import <ShortcutRecorder/ShortcutRecorder.h>
 
+@class AutoclickAppDelegate;
+
+@interface NSApplication (AppDelegate)
+- (AutoclickAppDelegate *)appDelegate;
+@end
+
 @interface AutoclickAppDelegate : NSObject <NSApplicationDelegate> {
     __unsafe_unretained NSWindow *window;
     

@@ -8,6 +8,14 @@
 
 #import "AutoclickAppDelegate.h"
 
+@implementation NSApplication (AppDelegate)
+
+- (AutoclickAppDelegate *)appDelegate {
+    return (AutoclickAppDelegate *)[NSApp delegate];
+}
+
+@end
+
 @interface AutoclickAppDelegate(Private)
 
 - (IBAction)changeMode:(id)sender;
@@ -342,7 +350,7 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void 
 	EventHotKeyID hotKeyID;
 	GetEventParameter(theEvent, kEventParamDirectObject, typeEventHotKeyID, NULL, sizeof(hotKeyID), NULL, &hotKeyID);
 
-    [[NSApp delegate] startStop:nil];
+    [[NSApp appDelegate] startStop:nil];
     
 	return noErr;
 }

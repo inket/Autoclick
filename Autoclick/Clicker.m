@@ -28,7 +28,7 @@
     CGPoint point = [NSEvent mouseLocation];
     
     // Is Autoclick's window front and the cursor is inside it ?
-    if ([[[NSApp delegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp delegate] window] frame])) return;
+    if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
 
     if (DEBUG_ENABLED) NSLog(@"Left Click!");
     point.y = [[NSScreen mainScreen] frame].size.height - point.y;
@@ -46,7 +46,7 @@
     CGPoint point = [NSEvent mouseLocation];
     
     // Is Autoclick's window front and the cursor is inside it ?
-    if ([[[NSApp delegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp delegate] window] frame])) return;
+    if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
     
     if (DEBUG_ENABLED) NSLog(@"Right Click!");
     point.y = [[NSScreen mainScreen] frame].size.height - point.y;
@@ -64,7 +64,7 @@
     CGPoint point = [NSEvent mouseLocation];
     
     // Is Autoclick's window front and the cursor is inside it ?
-    if ([[[NSApp delegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp delegate] window] frame])) return;
+    if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
     
     if (DEBUG_ENABLED) NSLog(@"Middle Click!");
     point.y = [[NSScreen mainScreen] frame].size.height - point.y;
@@ -102,12 +102,12 @@
         if ([NSEvent modifierFlags] & NSFunctionKeyMask)
         {
             [statusLabel setStringValue:@"Paused…"];
-            [[NSApp delegate] pausedIcon];
+            [[NSApp appDelegate] pausedIcon];
         }
         else
         {
             [statusLabel setStringValue:@"Clicking…"];
-            [[NSApp delegate] clickingIcon];
+            [[NSApp appDelegate] clickingIcon];
         }
         
         [runLoop run];
@@ -126,9 +126,9 @@
         [theThread cancel];
     
     isClicking = NO;
-    [[NSApp delegate] stoppedClicking];
+    [[NSApp appDelegate] stoppedClicking];
     [statusLabel setStringValue:@"Stopped automatically."];
-    [[NSApp delegate] defaultIcon];
+    [[NSApp appDelegate] defaultIcon];
     
     if (DEBUG_ENABLED) NSLog(@"Stopped Clicking Thread");
 }
@@ -142,9 +142,9 @@
     
     [clickThread cancel];
     isClicking = NO;
-    [[NSApp delegate] stoppedClicking];
+    [[NSApp appDelegate] stoppedClicking];
     [statusLabel setStringValue:@"Stopped."];
-    [[NSApp delegate] defaultIcon];
+    [[NSApp appDelegate] defaultIcon];
     
     if (DEBUG_ENABLED) NSLog(@"Stopped Clicking Thread");
 }
@@ -164,7 +164,7 @@
     waitingTimer = [NSTimer scheduledTimerWithTimeInterval:start target:self selector:@selector(startClickingThread:) userInfo:parameters repeats:NO];
     
     [statusLabel setStringValue:@"Waiting…"];
-    [[NSApp delegate] waitingIcon];
+    [[NSApp appDelegate] waitingIcon];
 }
 
 - (void)startClicking:(int)button rate:(NSInteger)rate
@@ -181,7 +181,7 @@
         NSLog(@"—————————————————————————");
     }
         
-    [[[NSApp delegate] modeButton] setEnabled:NO];
+    [[[NSApp appDelegate] modeButton] setEnabled:NO];
     isClicking = YES;
     
     NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:button], @"button", [NSNumber numberWithInteger:rate], @"rate", [NSNumber numberWithInteger:start], @"start", [NSNumber numberWithInteger:stop], @"stop", [NSNumber numberWithInteger:stationary], @"stationary", nil];
@@ -202,7 +202,7 @@
         waitingTimer = nil;
         stationarySeconds = 0;
         
-        statusLabel = [[NSApp delegate] statusLabel];
+        statusLabel = [[NSApp appDelegate] statusLabel];
         
         NSEvent* (^moveBlock)(NSEvent*) = ^(NSEvent* event) {
             if (DEBUG_ENABLED && fnPressed) NSLog(@"Mouse Moved");
@@ -225,7 +225,7 @@
                 if (isClicking && !isWaiting)
                 {
                     [statusLabel setStringValue:@"Paused…"];
-                    [[NSApp delegate] pausedIcon];
+                    [[NSApp appDelegate] pausedIcon];
                 }
             }
             else
@@ -235,7 +235,7 @@
                 if (isClicking && !isWaiting)
                 {
                     [statusLabel setStringValue:@"Clicking…"];
-                    [[NSApp delegate] clickingIcon];
+                    [[NSApp appDelegate] clickingIcon];
                 }
             }
             
