@@ -203,38 +203,43 @@
         stationarySeconds = 0;
         
         statusLabel = [[NSApp appDelegate] statusLabel];
-        
+
+        __weak typeof(self) weakSelf = self;
         NSEvent* (^moveBlock)(NSEvent*) = ^(NSEvent* event) {
-            if (DEBUG_ENABLED && fnPressed) NSLog(@"Mouse Moved");
+            typeof(self) strongSelf = weakSelf;
+            if (!strongSelf) { return (NSEvent *)nil; }
+
+            if (DEBUG_ENABLED && strongSelf->fnPressed) NSLog(@"Mouse Moved");
             
-            lastMoved = [[NSDate date] timeIntervalSince1970];
+            strongSelf->lastMoved = [[NSDate date] timeIntervalSince1970];
             
             return event;
         };
-
 
         [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskMouseMoved handler:(void(^)(NSEvent*))moveBlock];
         [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskMouseMoved handler:moveBlock];
         
         NSEvent* (^fnBlock)(NSEvent*) = ^(NSEvent* event){
+            typeof(self) strongSelf = weakSelf;
+            if (!strongSelf) { return (NSEvent *)nil; }
 //            if (DEBUG_ENABLED) NSLog(@"Flag Changed");
             
             if ([event modifierFlags] & NSEventModifierFlagFunction) {
-                fnPressed = YES;
+                strongSelf->fnPressed = YES;
                 
-                if (isClicking && !isWaiting)
+                if (strongSelf->isClicking && !strongSelf->isWaiting)
                 {
-                    [statusLabel setStringValue:@"Paused…"];
+                    [strongSelf->statusLabel setStringValue:@"Paused…"];
                     [[NSApp appDelegate] pausedIcon];
                 }
             }
             else
             {
-                fnPressed = NO;
+                strongSelf->fnPressed = NO;
                 
-                if (isClicking && !isWaiting)
+                if (strongSelf->isClicking && !strongSelf->isWaiting)
                 {
-                    [statusLabel setStringValue:@"Clicking…"];
+                    [strongSelf->statusLabel setStringValue:@"Clicking…"];
                     [[NSApp appDelegate] clickingIcon];
                 }
             }
