@@ -316,6 +316,16 @@
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
+- (IBAction)openGitHub:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"https://github.com/inket/Autoclick"];
+    [[NSWorkspace sharedWorkspace] openURL:url];
+}
+
+- (IBAction)openBuyMeACoffee:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"https://www.buymeacoffee.com/mahdibchatnia"];
+    [[NSWorkspace sharedWorkspace] openURL:url];
+}
+
 #pragma mark - Icon Handling
 
 - (void)defaultIcon {

@@ -170,6 +170,18 @@
                                     <action selector="openSupport:" target="494" id="709"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="GitHub…" id="0yI-q1-jqA">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openGitHub:" target="494" id="Ie4-rJ-PBD"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Buy Me a Coffee…" id="PYF-cz-L8C">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openBuyMeACoffee:" target="494" id="xXm-DC-bk8"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
