@@ -197,6 +197,16 @@
     }
     else
     {
+        NSDictionary *options = @{(__bridge id) kAXTrustedCheckOptionPrompt : @YES};
+        BOOL accessibilityEnabled = AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef) options);
+
+        if (!accessibilityEnabled) {
+            // Do not enable clicking if accessibility is off because the user might open the Privacy > Accessibility
+            // settings then check the box next to Autoclick which will immediately be unchecked by the automatic
+            // clicking.
+            return;
+        }
+
         // Button
         int selectedButton;
         switch ([buttonSelector indexOfSelectedItem]) {
