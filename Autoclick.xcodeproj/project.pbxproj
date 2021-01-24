@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B201D44C1441A57900F3CB0B /* Clicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B201D44B1441A57900F3CB0B /* Clicker.m */; };
-		B208906214A9295200A255B1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B208906114A9295200A255B1 /* Carbon.framework */; };
-		B2AC8F3813EC9AB300A890AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AC8F3713EC9AB300A890AA /* Cocoa.framework */; };
 		B2AC8F4213EC9AB300A890AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */; };
 		B2AC8F4413EC9AB300A890AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4313EC9AB300A890AA /* main.m */; };
 		B2AC8F4B13EC9AB300A890AA /* AutoclickAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */; };
@@ -23,19 +21,12 @@
 		B2E421BF14ACC9A100005139 /* default.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B814ACC9A100005139 /* default.icns */; };
 		B2E421C014ACC9A100005139 /* paused.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B914ACC9A100005139 /* paused.icns */; };
 		B2E421C114ACC9A100005139 /* waiting.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421BA14ACC9A100005139 /* waiting.icns */; };
-		B2E421CA14ACE0B400005139 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E421C914ACE0B300005139 /* IOKit.framework */; };
-		B2E421CC14ACE0B900005139 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E421CB14ACE0B900005139 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B201D44A1441A57900F3CB0B /* Clicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clicker.h; sourceTree = "<group>"; };
 		B201D44B1441A57900F3CB0B /* Clicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clicker.m; sourceTree = "<group>"; };
-		B208906114A9295200A255B1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		B2AC8F3313EC9AB300A890AA /* Autoclick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autoclick.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2AC8F3713EC9AB300A890AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		B2AC8F3A13EC9AB300A890AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		B2AC8F3B13EC9AB300A890AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		B2AC8F3C13EC9AB300A890AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2AC8F3F13EC9AB300A890AA /* Autoclick-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Autoclick-Info.plist"; sourceTree = "<group>"; };
 		B2AC8F4113EC9AB300A890AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B2AC8F4313EC9AB300A890AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,8 +43,6 @@
 		B2E421B814ACC9A100005139 /* default.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = default.icns; sourceTree = "<group>"; };
 		B2E421B914ACC9A100005139 /* paused.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = paused.icns; sourceTree = "<group>"; };
 		B2E421BA14ACC9A100005139 /* waiting.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = waiting.icns; sourceTree = "<group>"; };
-		B2E421C914ACE0B300005139 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		B2E421CB14ACE0B900005139 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2E421CC14ACE0B900005139 /* Security.framework in Frameworks */,
-				B2E421CA14ACE0B400005139 /* IOKit.framework in Frameworks */,
-				B208906214A9295200A255B1 /* Carbon.framework in Frameworks */,
 				B2BBD04925BD749100EEA9DF /* ShortcutRecorder in Frameworks */,
-				B2AC8F3813EC9AB300A890AA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,33 +77,18 @@
 		B2AC8F3613EC9AB300A890AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B2E421CB14ACE0B900005139 /* Security.framework */,
-				B2E421C914ACE0B300005139 /* IOKit.framework */,
-				B208906114A9295200A255B1 /* Carbon.framework */,
-				B2AC8F3713EC9AB300A890AA /* Cocoa.framework */,
-				B2AC8F3913EC9AB300A890AA /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B2AC8F3913EC9AB300A890AA /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B2AC8F3A13EC9AB300A890AA /* AppKit.framework */,
-				B2AC8F3B13EC9AB300A890AA /* CoreData.framework */,
-				B2AC8F3C13EC9AB300A890AA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		B2AC8F3D13EC9AB300A890AA /* Autoclick */ = {
 			isa = PBXGroup;
 			children = (
 				B2E421B214ACC96E00005139 /* Icons */,
+				B2AC8F3E13EC9AB300A890AA /* Supporting Files */,
 				B2AC8F4913EC9AB300A890AA /* AutoclickAppDelegate.h */,
 				B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */,
 				B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */,
-				B2AC8F3E13EC9AB300A890AA /* Supporting Files */,
 				B2AC8F5413ECAD5800A890AA /* MBNumberField.h */,
 				B2AC8F5513ECAD5800A890AA /* MBNumberField.m */,
 				B201D44A1441A57900F3CB0B /* Clicker.h */,
