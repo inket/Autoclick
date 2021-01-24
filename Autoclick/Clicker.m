@@ -23,56 +23,62 @@
 
 - (void)leftClick {
     if (![self checkBeforeClicking]) return;
-    
-    // Get the mouse position
-    CGPoint point = [NSEvent mouseLocation];
-    
-    // Is Autoclick's window front and the cursor is inside it ?
-    if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
 
-    if (DEBUG_ENABLED) NSLog(@"Left Click!");
-    point.y = [[NSScreen mainScreen] frame].size.height - point.y;
-    CGEventRef leftClick = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, point, kCGMouseButtonLeft);
-    CGEventPost(kCGHIDEventTap, leftClick);
-    CGEventSetType(leftClick, kCGEventLeftMouseUp);
-    CGEventPost(kCGHIDEventTap, leftClick);
-    CFRelease(leftClick);
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        // Get the mouse position
+        CGPoint point = [NSEvent mouseLocation];
+
+        // Is Autoclick's window front and the cursor is inside it ?
+        if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
+
+        if (DEBUG_ENABLED) NSLog(@"Left Click!");
+        point.y = [[NSScreen mainScreen] frame].size.height - point.y;
+        CGEventRef leftClick = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, point, kCGMouseButtonLeft);
+        CGEventPost(kCGHIDEventTap, leftClick);
+        CGEventSetType(leftClick, kCGEventLeftMouseUp);
+        CGEventPost(kCGHIDEventTap, leftClick);
+        CFRelease(leftClick);
+    });
 }
 
 - (void)rightClick {
     if (![self checkBeforeClicking]) return;
-    
-    // Get the mouse position
-    CGPoint point = [NSEvent mouseLocation];
-    
-    // Is Autoclick's window front and the cursor is inside it ?
-    if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
-    
-    if (DEBUG_ENABLED) NSLog(@"Right Click!");
-    point.y = [[NSScreen mainScreen] frame].size.height - point.y;
-    CGEventRef rightClick = CGEventCreateMouseEvent(NULL, kCGEventRightMouseDown, point, kCGMouseButtonRight);
-    CGEventPost(kCGHIDEventTap, rightClick);
-    CGEventSetType(rightClick, kCGEventRightMouseUp);
-    CGEventPost(kCGHIDEventTap, rightClick);
-    CFRelease(rightClick);
+
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        // Get the mouse position
+        CGPoint point = [NSEvent mouseLocation];
+
+        // Is Autoclick's window front and the cursor is inside it ?
+        if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
+
+        if (DEBUG_ENABLED) NSLog(@"Right Click!");
+        point.y = [[NSScreen mainScreen] frame].size.height - point.y;
+        CGEventRef rightClick = CGEventCreateMouseEvent(NULL, kCGEventRightMouseDown, point, kCGMouseButtonRight);
+        CGEventPost(kCGHIDEventTap, rightClick);
+        CGEventSetType(rightClick, kCGEventRightMouseUp);
+        CGEventPost(kCGHIDEventTap, rightClick);
+        CFRelease(rightClick);
+    });
 }
 
 - (void)middleClick {
     if (![self checkBeforeClicking]) return;
-    
-    // Get the mouse position
-    CGPoint point = [NSEvent mouseLocation];
-    
-    // Is Autoclick's window front and the cursor is inside it ?
-    if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
-    
-    if (DEBUG_ENABLED) NSLog(@"Middle Click!");
-    point.y = [[NSScreen mainScreen] frame].size.height - point.y;
-    CGEventRef middleClick = CGEventCreateMouseEvent(NULL, kCGEventOtherMouseDown, point, kCGMouseButtonCenter);
-    CGEventPost(kCGHIDEventTap, middleClick);
-    CGEventSetType(middleClick, kCGEventOtherMouseUp);
-    CGEventPost(kCGHIDEventTap, middleClick);
-    CFRelease(middleClick);
+
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        // Get the mouse position
+        CGPoint point = [NSEvent mouseLocation];
+
+        // Is Autoclick's window front and the cursor is inside it ?
+        if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
+
+        if (DEBUG_ENABLED) NSLog(@"Middle Click!");
+        point.y = [[NSScreen mainScreen] frame].size.height - point.y;
+        CGEventRef middleClick = CGEventCreateMouseEvent(NULL, kCGEventOtherMouseDown, point, kCGMouseButtonCenter);
+        CGEventPost(kCGHIDEventTap, middleClick);
+        CGEventSetType(middleClick, kCGEventOtherMouseUp);
+        CGEventPost(kCGHIDEventTap, middleClick);
+        CFRelease(middleClick);
+    });
 }
 
 - (void)clickThread:(NSDictionary*)parameters {
@@ -95,19 +101,27 @@
         timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:selector userInfo:nil repeats:YES];
         
         if ([[parameters objectForKey:@"stop"] integerValue] > 0)
-            [NSTimer scheduledTimerWithTimeInterval:[[parameters objectForKey:@"stop"] integerValue] target:self selector:@selector(stopClickingByTimer:) userInfo:[NSDictionary dictionaryWithObject:clickThread forKey:@"clickThread"] repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:[[parameters objectForKey:@"stop"] integerValue]
+                                             target:self
+                                           selector:@selector(stopClickingByTimer:)
+                                           userInfo:[NSDictionary dictionaryWithObject:clickThread forKey:@"clickThread"]
+                                            repeats:NO];
         
         stationarySeconds = [[parameters objectForKey:@"stationary"] integerValue];
         
         if ([NSEvent modifierFlags] & NSEventModifierFlagFunction)
         {
-            [statusLabel setStringValue:@"Paused…"];
-            [[NSApp appDelegate] pausedIcon];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self->statusLabel setStringValue:@"Paused…"];
+                [[NSApp appDelegate] pausedIcon];
+            });
         }
         else
         {
-            [statusLabel setStringValue:@"Clicking…"];
-            [[NSApp appDelegate] clickingIcon];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self->statusLabel setStringValue:@"Clicking…"];
+                [[NSApp appDelegate] clickingIcon];
+            });
         }
         
         [runLoop run];
