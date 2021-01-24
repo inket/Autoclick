@@ -25,7 +25,6 @@
 		B2E421C114ACC9A100005139 /* waiting.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421BA14ACC9A100005139 /* waiting.icns */; };
 		B2E421CA14ACE0B400005139 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E421C914ACE0B300005139 /* IOKit.framework */; };
 		B2E421CC14ACE0B900005139 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E421CB14ACE0B900005139 /* Security.framework */; };
-		B2E421CE14ACE0BF00005139 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E421CD14ACE0BF00005139 /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +54,6 @@
 		B2E421BA14ACC9A100005139 /* waiting.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = waiting.icns; sourceTree = "<group>"; };
 		B2E421C914ACE0B300005139 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		B2E421CB14ACE0B900005139 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		B2E421CD14ACE0BF00005139 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2E421CE14ACE0BF00005139 /* libcrypto.dylib in Frameworks */,
 				B2E421CC14ACE0B900005139 /* Security.framework in Frameworks */,
 				B2E421CA14ACE0B400005139 /* IOKit.framework in Frameworks */,
 				B208906214A9295200A255B1 /* Carbon.framework in Frameworks */,
@@ -95,7 +92,6 @@
 		B2AC8F3613EC9AB300A890AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B2E421CD14ACE0BF00005139 /* libcrypto.dylib */,
 				B2E421CB14ACE0B900005139 /* Security.framework */,
 				B2E421C914ACE0B300005139 /* IOKit.framework */,
 				B208906114A9295200A255B1 /* Carbon.framework */,
