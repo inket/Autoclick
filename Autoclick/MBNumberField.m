@@ -10,6 +10,7 @@
 
 @implementation MBNumberField
 
+@synthesize delegate = _delegate;
 @synthesize stepper;
 
 - (void)textDidChange:(NSNotification *)notification {
