@@ -1,5 +1,7 @@
 # Autoclick 2.0
 
+<img src="screenshot.png" width="500" />
+
 A simple Mac app that simulates mouse clicks when needed. Highly configurable and easy to use.
 
 [Download](https://mahdi.jp/apps/autoclick)
