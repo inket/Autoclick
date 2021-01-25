@@ -8,7 +8,7 @@ A simple Mac app that simulates mouse clicks when needed. Highly configurable an
 
 License is GNU GPLv2.
 
-<a href="https://www.buymeacoffee.com/mahdibchatnia" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217" ></a>
+<a href="https://www.buymeacoffee.com/mahdibchatnia" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="48" width="173" ></a>
 
 ### Changelog
 
