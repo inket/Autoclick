@@ -12,6 +12,10 @@ License is GNU GPLv2.
 
 ### Changelog
 
+#### 2.0.1 (2021/2/6)
+
+- Fixed cursor jumping in multi-monitor setups, #1
+
 #### 2.0 (2021)
 
 - Codesigned & notarized so that it's trusted by new versions of macOS
