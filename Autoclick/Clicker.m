@@ -10,6 +10,23 @@
 
 @synthesize isClicking;
 
+- (NSScreen *)currentScreenForMouseLocation:(CGPoint)mouseLocation {
+    NSScreen *currentScreen = nil;
+
+    for (NSScreen *screen in NSScreen.screens) {
+        if (NSPointInRect(mouseLocation, screen.frame)) {
+            currentScreen = screen;
+            break;
+        }
+    }
+
+    if (currentScreen == nil) {
+        currentScreen = NSScreen.mainScreen;
+    }
+
+    return currentScreen;
+}
+
 - (BOOL)checkBeforeClicking {
     if ([[NSThread currentThread] isCancelled]) [NSThread exit];
     if ([[NSDate date] timeIntervalSince1970] - lastMoved >= stationarySeconds)
@@ -18,64 +35,60 @@
     return NO;
 }
 
-- (void)leftClick {
+- (void)clickWithButton:(CGMouseButton)mouseButton {
     if (![self checkBeforeClicking]) return;
 
     dispatch_sync(dispatch_get_main_queue(), ^{
-        // Get the mouse position
         CGPoint point = [NSEvent mouseLocation];
 
         // Is Autoclick's window front and the cursor is inside it ?
-        if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
+        NSWindow *appWindow = NSApp.appDelegate.window;
+        if (appWindow.isKeyWindow && NSPointInRect(point, appWindow.frame)) {
+            return;
+        }
 
-        if (DEBUG_ENABLED) NSLog(@"Left Click!");
-        point.y = [[NSScreen mainScreen] frame].size.height - point.y;
-        CGEventRef leftClick = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, point, kCGMouseButtonLeft);
-        CGEventPost(kCGHIDEventTap, leftClick);
-        CGEventSetType(leftClick, kCGEventLeftMouseUp);
-        CGEventPost(kCGHIDEventTap, leftClick);
-        CFRelease(leftClick);
+        if (DEBUG_ENABLED) {
+            NSLog(@"Click with button: %@", @(mouseButton));
+        }
+
+        NSScreen *currentScreen = [self currentScreenForMouseLocation:point];
+        point.y = currentScreen.frame.size.height - point.y + currentScreen.frame.origin.y;
+
+        CGEventType mouseDownEvent;
+        CGEventType mouseUpEvent;
+        switch (mouseButton) {
+            case kCGMouseButtonLeft:
+                mouseDownEvent = kCGEventLeftMouseDown;
+                mouseUpEvent = kCGEventLeftMouseUp;
+                break;
+            case kCGMouseButtonRight:
+                mouseDownEvent = kCGEventRightMouseDown;
+                mouseUpEvent = kCGEventRightMouseUp;
+                break;
+            case kCGMouseButtonCenter:
+                mouseDownEvent = kCGEventOtherMouseDown;
+                mouseUpEvent = kCGEventOtherMouseUp;
+                break;
+        }
+
+        CGEventRef click = CGEventCreateMouseEvent(NULL, mouseDownEvent, point, mouseButton);
+        CGEventPost(kCGHIDEventTap, click);
+        CGEventSetType(click, mouseUpEvent);
+        CGEventPost(kCGHIDEventTap, click);
+        CFRelease(click);
     });
+}
+
+- (void)leftClick {
+    [self clickWithButton:kCGMouseButtonLeft];
 }
 
 - (void)rightClick {
-    if (![self checkBeforeClicking]) return;
-
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        // Get the mouse position
-        CGPoint point = [NSEvent mouseLocation];
-
-        // Is Autoclick's window front and the cursor is inside it ?
-        if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
-
-        if (DEBUG_ENABLED) NSLog(@"Right Click!");
-        point.y = [[NSScreen mainScreen] frame].size.height - point.y;
-        CGEventRef rightClick = CGEventCreateMouseEvent(NULL, kCGEventRightMouseDown, point, kCGMouseButtonRight);
-        CGEventPost(kCGHIDEventTap, rightClick);
-        CGEventSetType(rightClick, kCGEventRightMouseUp);
-        CGEventPost(kCGHIDEventTap, rightClick);
-        CFRelease(rightClick);
-    });
+    [self clickWithButton:kCGMouseButtonRight];
 }
 
 - (void)middleClick {
-    if (![self checkBeforeClicking]) return;
-
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        // Get the mouse position
-        CGPoint point = [NSEvent mouseLocation];
-
-        // Is Autoclick's window front and the cursor is inside it ?
-        if ([[[NSApp appDelegate] window] isKeyWindow] && NSPointInRect(point, [[[NSApp appDelegate] window] frame])) return;
-
-        if (DEBUG_ENABLED) NSLog(@"Middle Click!");
-        point.y = [[NSScreen mainScreen] frame].size.height - point.y;
-        CGEventRef middleClick = CGEventCreateMouseEvent(NULL, kCGEventOtherMouseDown, point, kCGMouseButtonCenter);
-        CGEventPost(kCGHIDEventTap, middleClick);
-        CGEventSetType(middleClick, kCGEventOtherMouseUp);
-        CGEventPost(kCGHIDEventTap, middleClick);
-        CFRelease(middleClick);
-    });
+    [self clickWithButton:kCGMouseButtonCenter];
 }
 
 - (void)clickThread:(NSDictionary*)parameters {
