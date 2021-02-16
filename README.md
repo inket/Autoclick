@@ -12,6 +12,10 @@ License is GNU GPLv2.
 
 ### Changelog
 
+#### 2.0.2 (2021/2/17)
+
+- Better fix for multi-monitor setups, [#1](https://github.com/inket/Autoclick/issues/1)
+
 #### 2.0.1 (2021/2/6)
 
 - Fixed cursor jumping in multi-monitor setups, #1
