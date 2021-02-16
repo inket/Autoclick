@@ -22,6 +22,6 @@ License is GNU GPLv2.
 - Modernized codebase & added Apple Silicon support
 - Will now display the accessibility permission popup if you haven't allowed it yet
 
-#### 1.0 (2011)
+#### [1.0 (2011)](https://tars.mahdi.jp/apps/autoclick-1.0.zip)
 
 - Initial version
