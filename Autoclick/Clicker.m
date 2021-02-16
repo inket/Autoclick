@@ -27,6 +27,16 @@
     return currentScreen;
 }
 
+- (NSScreen *)actualMainScreen {
+    for (NSScreen *screen in NSScreen.screens) {
+        if (CGPointEqualToPoint(screen.frame.origin, CGPointZero)) {
+            return screen;
+        }
+    }
+
+    return NSScreen.mainScreen;
+}
+
 - (BOOL)checkBeforeClicking {
     if ([[NSThread currentThread] isCancelled]) [NSThread exit];
     if ([[NSDate date] timeIntervalSince1970] - lastMoved >= stationarySeconds)
@@ -51,8 +61,11 @@
             NSLog(@"Click with button: %@", @(mouseButton));
         }
 
+        NSScreen *mainScreen = [self actualMainScreen];
         NSScreen *currentScreen = [self currentScreenForMouseLocation:point];
-        point.y = currentScreen.frame.size.height - point.y + currentScreen.frame.origin.y;
+        CGFloat screensOverlap = CGRectGetMaxY(currentScreen.frame);
+        CGFloat currentScreenTopMargin = mainScreen.frame.size.height - screensOverlap;
+        point.y = currentScreenTopMargin + currentScreen.frame.size.height - point.y + currentScreen.frame.origin.y;
 
         CGEventType mouseDownEvent;
         CGEventType mouseUpEvent;
