@@ -73,6 +73,8 @@
     [stopAfterSelector syncWithStepper];
     [ifStationaryForSelector syncWithStepper];
 
+    [shortcutRecorder setAllowedModifierFlags:SRCocoaModifierFlagsMask requiredModifierFlags:0 allowsEmptyModifierFlags:YES];
+
     _defaults = NSUserDefaultsController.sharedUserDefaultsController;
     NSString *keyPath = @"values.shortcut";
     NSDictionary *options = @{NSValueTransformerNameBindingOption: NSKeyedUnarchiveFromDataTransformerName};
