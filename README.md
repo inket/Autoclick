@@ -12,6 +12,11 @@ License is GNU GPLv2.
 
 ### Changelog
 
+#### 2.0.3 (2021/2/23)
+
+- Allow hotkeys without modifiers, [#2](https://github.com/inket/Autoclick/issues/2)
+
+
 #### 2.0.2 (2021/2/17)
 
 - Better fix for multi-monitor setups, [#1](https://github.com/inket/Autoclick/issues/1)
