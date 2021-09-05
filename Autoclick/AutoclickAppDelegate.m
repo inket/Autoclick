@@ -22,7 +22,7 @@
 @synthesize statusLabel;
 @synthesize startStopButton;
 
-- (void)window:(NSWindow*)wndw willEncodeRestorableState:(NSCoder *)state {
+- (void)encodeRestorableState:(NSCoder *)state {
     [state encodeInteger:[buttonSelector indexOfSelectedItem] forKey:@"buttonSelector"];
     [state encodeInteger:[rateSelector integerValue] forKey:@"rateSelector"];
     [state encodeInteger:[rateUnitSelector indexOfSelectedItem] forKey:@"rateUnitSelector"];
@@ -40,7 +40,7 @@
     [state encodeInteger:[ifStationaryForSelector integerValue] forKey:@"ifStationaryForSelector"];
 }
 
-- (void)window:(NSWindow*)wndw didDecodeRestorableState:(NSCoder *)state {
+- (void)decodeRestorableState:(NSCoder *)state {
     [buttonSelector selectItemAtIndex:[state decodeIntegerForKey:@"buttonSelector"]];
     [rateSelector setIntegerValue:[state decodeIntegerForKey:@"rateSelector"]];
     [rateUnitSelector selectItemAtIndex:[state decodeIntegerForKey:@"rateUnitSelector"]];
@@ -102,15 +102,12 @@
         [self setMode:NO];
     else
         [self setMode:YES];
-    
-    if (floor(NSAppKitVersionNumber) == NSAppKitVersionNumber10_6)
+
+    NSData* data = [userDefaults objectForKey:@"State"];
+    if (data)
     {
-        NSData* data = [userDefaults objectForKey:@"State"];
-        if (data)
-        {
-            NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:data error:nil];
-            [self window:window didDecodeRestorableState:unarchiver];
-        }
+        NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:data error:nil];
+        [self decodeRestorableState:unarchiver];
     }
     
     [window setDelegate:(id<NSWindowDelegate>)self];
@@ -268,15 +265,11 @@
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
-    if (floor(NSAppKitVersionNumber) == NSAppKitVersionNumber10_6)
-    {
-        NSKeyedArchiver* archiver = [[NSKeyedArchiver alloc] initRequiringSecureCoding:NO];
-        [self window:window willEncodeRestorableState:archiver];
-        [archiver finishEncoding];
-        
-        [userDefaults setObject:archiver.encodedData forKey:@"State"];
-        [userDefaults synchronize];
-    }
+    NSKeyedArchiver* archiver = [[NSKeyedArchiver alloc] initRequiringSecureCoding:NO];
+    [self encodeRestorableState:archiver];
+    [archiver finishEncoding];
+
+    [userDefaults setObject:archiver.encodedData forKey:@"State"];
 }
 
 - (IBAction)changedState:(id)sender {
