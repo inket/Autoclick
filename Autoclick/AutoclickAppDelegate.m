@@ -162,8 +162,8 @@
         NSRect frame = [window frame];
         if (frame.size.height >= 400)
         {
-            frame.size.height = 206;
-            frame.origin.y += 404 - 206;
+            frame.size.height = 217;
+            frame.origin.y += 415 - 217;
 
             [window setFrame:frame display:YES animate:YES];
         }
@@ -177,10 +177,10 @@
         }];
         
         NSRect frame = [window frame];
-        if (frame.size.height <= 210)
+        if (frame.size.height <= 300)
         {
-            frame.size.height = 404;
-            frame.origin.y -= 404 - 206;
+            frame.size.height = 415;
+            frame.origin.y -= 415 - 217;
 
             [window setFrame:frame display:YES animate:YES];    
         }
