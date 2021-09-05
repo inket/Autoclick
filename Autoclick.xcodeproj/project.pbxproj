@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B201D44C1441A57900F3CB0B /* Clicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B201D44B1441A57900F3CB0B /* Clicker.m */; };
+		B242AB3A26E537D8007EE672 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B242AB3926E537D8007EE672 /* IOKit.framework */; platformFilter = maccatalyst; };
 		B2AC8F4213EC9AB300A890AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */; };
 		B2AC8F4413EC9AB300A890AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4313EC9AB300A890AA /* main.m */; };
 		B2AC8F4B13EC9AB300A890AA /* AutoclickAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		B201D44A1441A57900F3CB0B /* Clicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clicker.h; sourceTree = "<group>"; };
 		B201D44B1441A57900F3CB0B /* Clicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clicker.m; sourceTree = "<group>"; };
+		B242AB3926E537D8007EE672 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		B2AC8F3313EC9AB300A890AA /* Autoclick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autoclick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AC8F3F13EC9AB300A890AA /* Autoclick-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Autoclick-Info.plist"; sourceTree = "<group>"; };
 		B2AC8F4113EC9AB300A890AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2BBD04925BD749100EEA9DF /* ShortcutRecorder in Frameworks */,
+				B242AB3A26E537D8007EE672 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		B2AC8F3613EC9AB300A890AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B242AB3926E537D8007EE672 /* IOKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -322,6 +326,7 @@
 		B2AC8F5213EC9AB300A890AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -345,6 +350,7 @@
 		B2AC8F5313EC9AB300A890AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;

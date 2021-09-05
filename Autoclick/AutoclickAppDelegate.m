@@ -4,6 +4,7 @@
 //
 
 #import "AutoclickAppDelegate.h"
+@import IOKit;
 
 @implementation NSApplication (AppDelegate)
 
@@ -204,6 +205,20 @@
             // settings then check the box next to Autoclick which will immediately be unchecked by the automatic
             // clicking.
             return;
+        }
+
+        if (@available(macOS 10.15, *)) {
+            BOOL inputMonitoringEnabled = IOHIDCheckAccess(kIOHIDRequestTypeListenEvent) == kIOHIDAccessTypeGranted;
+
+            // If Input Monitoring is off (should be 'Granted' when Accessibility is checked), request it
+            if (!inputMonitoringEnabled) {
+                IOHIDRequestAccess(kIOHIDRequestTypeListenEvent);
+
+                // Do not enable clicking because the user might not have a way to stop the clicking because the FN
+                // key will not be detected and they might not have a keyboard shortcut set (which might not be detected
+                // either)
+                return;
+            }
         }
 
         // Button
