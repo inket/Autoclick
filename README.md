@@ -12,6 +12,11 @@ License is GNU GPLv2.
 
 ### Changelog
 
+#### 2.0.4 (2021/9/6)
+
+- Fixed app not remembering your settings between restarts
+- App will now check Input Monitoring permission too, to make sure that you can stop the clicking with keyboard shortcuts/FN key
+
 #### 2.0.3 (2021/2/23)
 
 - Allow hotkeys without modifiers, [#2](https://github.com/inket/Autoclick/issues/2)
