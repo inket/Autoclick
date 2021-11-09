@@ -233,8 +233,8 @@
         // Rate
         NSInteger selectedRate = [rateSelector intValue];
         NSInteger selectedRateUnit = ([rateUnitSelector indexOfSelectedItem]==0)?1000:60000;
-        
-        NSInteger rate = (NSInteger)(selectedRateUnit / selectedRate); // a click every 'rate' (in ms)
+
+        double rate = selectedRateUnit / selectedRate; // a click every 'rate' (in ms)
         
         // Start Clicking or add the advanced preferences ?
         if (!mode)

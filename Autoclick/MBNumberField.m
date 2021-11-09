@@ -23,8 +23,9 @@
 }
 
 - (void)setIntegerValue:(NSInteger)anInteger {
-    [super setIntegerValue:anInteger];
-    oldValue = [self intValue];
+    [super setStringValue:[@(anInteger) stringValue]];
+
+    oldValue = [self integerValue];
 }
 
 - (IBAction)step:(id)sender {
