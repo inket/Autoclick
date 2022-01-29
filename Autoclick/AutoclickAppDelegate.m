@@ -318,21 +318,8 @@
 
 #pragma mark - Help & Support
 
-- (IBAction)openSupport:(id)sender {
-    NSString* subject = [@"Autoclick Support and Feedback" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-
-    NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"mailto:autoclick@mahdi.jp?subject=%@", subject]];
-    
-    [[NSWorkspace sharedWorkspace] openURL:url];
-}
-
 - (IBAction)openGitHub:(id)sender {
     NSURL *url = [NSURL URLWithString:@"https://github.com/inket/Autoclick"];
-    [[NSWorkspace sharedWorkspace] openURL:url];
-}
-
-- (IBAction)openBuyMeACoffee:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"https://www.buymeacoffee.com/mahdibchatnia"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
