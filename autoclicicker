@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B201D44C1441A57900F3CB0B /* Clicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B201D44B1441A57900F3CB0B /* Clicker.m */; };
+		B242AB3A26E537D8007EE672 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B242AB3926E537D8007EE672 /* IOKit.framework */; platformFilter = maccatalyst; };
+		B2AC8F4213EC9AB300A890AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */; };
+		B2AC8F4413EC9AB300A890AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4313EC9AB300A890AA /* main.m */; };
+		B2AC8F4B13EC9AB300A890AA /* AutoclickAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */; };
+		B2AC8F4E13EC9AB300A890AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */; };
+		B2AC8F5613ECAD5800A890AA /* MBNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AC8F5513ECAD5800A890AA /* MBNumberField.m */; };
+		B2BBD04925BD749100EEA9DF /* ShortcutRecorder in Frameworks */ = {isa = PBXBuildFile; productRef = B2BBD04825BD749100EEA9DF /* ShortcutRecorder */; };
+		B2E421BB14ACC9A100005139 /* clicking.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B414ACC9A100005139 /* clicking.icns */; };
+		B2E421BC14ACC9A100005139 /* clicking1.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B514ACC9A100005139 /* clicking1.icns */; };
+		B2E421BD14ACC9A100005139 /* clicking2.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B614ACC9A100005139 /* clicking2.icns */; };
+		B2E421BE14ACC9A100005139 /* clicking3.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B714ACC9A100005139 /* clicking3.icns */; };
+		B2E421BF14ACC9A100005139 /* default.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B814ACC9A100005139 /* default.icns */; };
+		B2E421C014ACC9A100005139 /* paused.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421B914ACC9A100005139 /* paused.icns */; };
+		B2E421C114ACC9A100005139 /* waiting.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2E421BA14ACC9A100005139 /* waiting.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B201D44A1441A57900F3CB0B /* Clicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clicker.h; sourceTree = "<group>"; };
+		B201D44B1441A57900F3CB0B /* Clicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clicker.m; sourceTree = "<group>"; };
+		B242AB3926E537D8007EE672 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B2AC8F3313EC9AB300A890AA /* Autoclick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autoclick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2AC8F3F13EC9AB300A890AA /* Autoclick-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Autoclick-Info.plist"; sourceTree = "<group>"; };
+		B2AC8F4113EC9AB300A890AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2AC8F4313EC9AB300A890AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2AC8F4513EC9AB300A890AA /* Autoclick-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autoclick-Prefix.pch"; sourceTree = "<group>"; };
+		B2AC8F4913EC9AB300A890AA /* AutoclickAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoclickAppDelegate.h; sourceTree = "<group>"; };
+		B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoclickAppDelegate.m; sourceTree = "<group>"; };
+		B2AC8F5413ECAD5800A890AA /* MBNumberField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNumberField.h; sourceTree = "<group>"; };
+		B2AC8F5513ECAD5800A890AA /* MBNumberField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNumberField.m; sourceTree = "<group>"; };
+		B2BBD04425BD73E000EEA9DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B2E421B414ACC9A100005139 /* clicking.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clicking.icns; sourceTree = "<group>"; };
+		B2E421B514ACC9A100005139 /* clicking1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clicking1.icns; sourceTree = "<group>"; };
+		B2E421B614ACC9A100005139 /* clicking2.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clicking2.icns; sourceTree = "<group>"; };
+		B2E421B714ACC9A100005139 /* clicking3.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clicking3.icns; sourceTree = "<group>"; };
+		B2E421B814ACC9A100005139 /* default.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = default.icns; sourceTree = "<group>"; };
+		B2E421B914ACC9A100005139 /* paused.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = paused.icns; sourceTree = "<group>"; };
+		B2E421BA14ACC9A100005139 /* waiting.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = waiting.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2AC8F3013EC9AB300A890AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2BBD04925BD749100EEA9DF /* ShortcutRecorder in Frameworks */,
+				B242AB3A26E537D8007EE672 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2AC8F2813EC9AB300A890AA = {
+			isa = PBXGroup;
+			children = (
+				B2AC8F3D13EC9AB300A890AA /* Autoclick */,
+				B2AC8F3613EC9AB300A890AA /* Frameworks */,
+				B2AC8F3413EC9AB300A890AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2AC8F3413EC9AB300A890AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC8F3313EC9AB300A890AA /* Autoclick.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2AC8F3613EC9AB300A890AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B242AB3926E537D8007EE672 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2AC8F3D13EC9AB300A890AA /* Autoclick */ = {
+			isa = PBXGroup;
+			children = (
+				B2E421B214ACC96E00005139 /* Icons */,
+				B2AC8F3E13EC9AB300A890AA /* Supporting Files */,
+				B2AC8F4913EC9AB300A890AA /* AutoclickAppDelegate.h */,
+				B2AC8F4A13EC9AB300A890AA /* AutoclickAppDelegate.m */,
+				B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */,
+				B2AC8F5413ECAD5800A890AA /* MBNumberField.h */,
+				B2AC8F5513ECAD5800A890AA /* MBNumberField.m */,
+				B201D44A1441A57900F3CB0B /* Clicker.h */,
+				B201D44B1441A57900F3CB0B /* Clicker.m */,
+			);
+			path = Autoclick;
+			sourceTree = "<group>";
+		};
+		B2AC8F3E13EC9AB300A890AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC8F3F13EC9AB300A890AA /* Autoclick-Info.plist */,
+				B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */,
+				B2AC8F4313EC9AB300A890AA /* main.m */,
+				B2AC8F4513EC9AB300A890AA /* Autoclick-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2E421B214ACC96E00005139 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B2E421B414ACC9A100005139 /* clicking.icns */,
+				B2E421B514ACC9A100005139 /* clicking1.icns */,
+				B2E421B614ACC9A100005139 /* clicking2.icns */,
+				B2E421B714ACC9A100005139 /* clicking3.icns */,
+				B2E421B814ACC9A100005139 /* default.icns */,
+				B2E421B914ACC9A100005139 /* paused.icns */,
+				B2E421BA14ACC9A100005139 /* waiting.icns */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2AC8F3213EC9AB300A890AA /* Autoclick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2AC8F5113EC9AB300A890AA /* Build configuration list for PBXNativeTarget "Autoclick" */;
+			buildPhases = (
+				B2AC8F2F13EC9AB300A890AA /* Sources */,
+				B2AC8F3013EC9AB300A890AA /* Frameworks */,
+				B2AC8F3113EC9AB300A890AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Autoclick;
+			packageProductDependencies = (
+				B2BBD04825BD749100EEA9DF /* ShortcutRecorder */,
+			);
+			productName = Autoclick;
+			productReference = B2AC8F3313EC9AB300A890AA /* Autoclick.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2AC8F2A13EC9AB300A890AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+			};
+			buildConfigurationList = B2AC8F2D13EC9AB300A890AA /* Build configuration list for PBXProject "Autoclick" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2AC8F2813EC9AB300A890AA;
+			packageReferences = (
+				B2BBD04725BD749100EEA9DF /* XCRemoteSwiftPackageReference "ShortcutRecorder" */,
+			);
+			productRefGroup = B2AC8F3413EC9AB300A890AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2AC8F3213EC9AB300A890AA /* Autoclick */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2AC8F3113EC9AB300A890AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2AC8F4213EC9AB300A890AA /* InfoPlist.strings in Resources */,
+				B2AC8F4E13EC9AB300A890AA /* MainMenu.xib in Resources */,
+				B2E421BB14ACC9A100005139 /* clicking.icns in Resources */,
+				B2E421BC14ACC9A100005139 /* clicking1.icns in Resources */,
+				B2E421BD14ACC9A100005139 /* clicking2.icns in Resources */,
+				B2E421BE14ACC9A100005139 /* clicking3.icns in Resources */,
+				B2E421BF14ACC9A100005139 /* default.icns in Resources */,
+				B2E421C014ACC9A100005139 /* paused.icns in Resources */,
+				B2E421C114ACC9A100005139 /* waiting.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2AC8F2F13EC9AB300A890AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2AC8F4413EC9AB300A890AA /* main.m in Sources */,
+				B2AC8F4B13EC9AB300A890AA /* AutoclickAppDelegate.m in Sources */,
+				B2AC8F5613ECAD5800A890AA /* MBNumberField.m in Sources */,
+				B201D44C1441A57900F3CB0B /* Clicker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2AC8F4013EC9AB300A890AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2AC8F4113EC9AB300A890AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B2AC8F4C13EC9AB300A890AA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2BBD04425BD73E000EEA9DF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2AC8F4F13EC9AB300A890AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B2AC8F5013EC9AB300A890AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B2AC8F5213EC9AB300A890AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = PP5UYHJQCD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autoclick/Autoclick-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Autoclick/Autoclick-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 2.0.5;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.mahdi.Autoclick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B2AC8F5313EC9AB300A890AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = PP5UYHJQCD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Autoclick/Autoclick-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Autoclick/Autoclick-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 2.0.5;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.mahdi.Autoclick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2AC8F2D13EC9AB300A890AA /* Build configuration list for PBXProject "Autoclick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2AC8F4F13EC9AB300A890AA /* Debug */,
+				B2AC8F5013EC9AB300A890AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2AC8F5113EC9AB300A890AA /* Build configuration list for PBXNativeTarget "Autoclick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2AC8F5213EC9AB300A890AA /* Debug */,
+				B2AC8F5313EC9AB300A890AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2BBD04725BD749100EEA9DF /* XCRemoteSwiftPackageReference "ShortcutRecorder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git://github.com/Kentzo/ShortcutRecorder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2BBD04825BD749100EEA9DF /* ShortcutRecorder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2BBD04725BD749100EEA9DF /* XCRemoteSwiftPackageReference "ShortcutRecorder" */;
+			productName = ShortcutRecorder;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B2AC8F2A13EC9AB300A890AA /* Project object */;
+}
