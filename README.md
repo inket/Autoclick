@@ -1,12 +1,12 @@
-# Autoclick 2.0
+# Autoclick 2.0 - [DOWNLOAD](https://tars.mahdi.jp/apps/autoclick.zip)
+
+**By [downloading](https://tars.mahdi.jp/apps/autoclick.zip) this app, you agree that it is provided "as is" and that you will receive NO SUPPORT whatsoever. This is a free app made in my free time and I do not owe you anything. Read the FAQ below for more info.**
+
+## What it is
 
 <img src="screenshot.png" width="400" />
 
 A simple Mac app that simulates mouse clicks when needed. Highly configurable and easy to use.
-
-## Download
-
-**By [downloading](https://tars.mahdi.jp/apps/autoclick.zip) this app, you agree that it is provided "as is" and that you will receive NO SUPPORT whatsoever. This is a free app made in my free time and I do not owe you anything. Read the FAQ below for more info.**
 
 ## FAQ
 
