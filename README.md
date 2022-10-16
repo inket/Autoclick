@@ -2,6 +2,8 @@
 
 **By [downloading](https://tars.mahdi.jp/apps/autoclick.zip) this app, you agree that it is provided "as is" and that you will receive NO SUPPORT whatsoever. This is a free app made in my free time and I do not owe you anything. Read the FAQ below for more info.**
 
+Repository is archived to stop people from creating pull requests to ask dumb questions.
+
 ## What it is
 
 <img src="screenshot.png" width="400" />
