@@ -25,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A6ACC35277AA5DB00B8302F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		5A6ACC37277AA7E200B8302F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.xib"; sourceTree = "<group>"; };
+		5A6ACC38277AA7F900B8302F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B201D44A1441A57900F3CB0B /* Clicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clicker.h; sourceTree = "<group>"; };
 		B201D44B1441A57900F3CB0B /* Clicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clicker.m; sourceTree = "<group>"; };
 		B242AB3926E537D8007EE672 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -164,6 +167,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = B2AC8F2813EC9AB300A890AA;
 			packageReferences = (
@@ -216,6 +220,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B2AC8F4113EC9AB300A890AA /* en */,
+				5A6ACC35277AA5DB00B8302F /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -224,6 +229,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				B2BBD04425BD73E000EEA9DF /* Base */,
+				5A6ACC37277AA7E200B8302F /* zh-Hans */,
+				5A6ACC38277AA7F900B8302F /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
